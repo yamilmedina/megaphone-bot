@@ -1,5 +1,6 @@
 package com.wire.megaphonebot
 
+import com.wire.xenon.assets.MessageText
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import javax.ws.rs.Consumes
@@ -19,7 +20,9 @@ class ExampleResource {
 
     @GET
     fun printHello(): Response {
-        logger.error(">>> hellooooooo !")
+        val message = MessageText("hola!")
+
+        logger.info(">>> ${message.messageId}")
         return Response.ok("HOOOLA!").build()
     }
 }

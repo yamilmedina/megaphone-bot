@@ -21,6 +21,10 @@ dependencies {
     implementation("io.quarkus:quarkus-resteasy-jackson")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     implementation("io.quarkus:quarkus-arc")
+    implementation("com.wire:lithium:3.4.2") {
+        exclude("com.github.smoketurner", "dropwizard-swagger")
+    }
+
     testImplementation("io.quarkus:quarkus-junit5")
 }
 
